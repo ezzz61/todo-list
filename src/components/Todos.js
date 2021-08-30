@@ -62,7 +62,7 @@ export default function Todos({ active }) {
         variants={containerVariant}
         animate="visible"
         initial="hidden"
-        className="mt-8 flex flex-col gap-y-8 mb-8"
+        className="mt-8 flex flex-col flex-wrap gap-y-8 mb-8"
       >
         {active
           ? activeTodos.map((todo) => (
@@ -92,7 +92,9 @@ export default function Todos({ active }) {
                   defaultChecked={todo.isCompleted}
                   onClick={() => completeHandler(todo.id)}
                 />
-                <p className="text-lg md:text-xl pl-2">{todo.todo}</p>
+                <p className="text-lg md:text-xl pl-2 flex-grow w-16">
+                  {todo.todo}
+                </p>
               </motion.li>
             ))}
       </motion.ul>

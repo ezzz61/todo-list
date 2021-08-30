@@ -10,6 +10,9 @@ export default function AddNewTodo() {
   const dispatch = useDispatch();
 
   const inputHanlder = (e) => {
+    if (e.target.value.length > 45) {
+      return alert("please add a simple todo");
+    }
     setInput(e.target.value);
   };
 
@@ -44,7 +47,7 @@ export default function AddNewTodo() {
       onSubmit={submitHandler}
     >
       <input
-        className="w-10/12 border-2 border-gray-300 py-2 md:py-4 rounded-xl pl-4 outline-none focus:border-gray-400 transition-all"
+        className="w-10/12 border-2 border-gray-300 py-2 md:py-4 rounded-xl pl-4 pr-4 outline-none focus:border-gray-400 transition-all"
         type="text"
         placeholder="add details"
         value={input}
