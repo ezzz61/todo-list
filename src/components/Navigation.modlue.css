@@ -1,0 +1,15 @@
+.line::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 12%;
+  background-color: #2f80ed;
+  display: block;
+}
